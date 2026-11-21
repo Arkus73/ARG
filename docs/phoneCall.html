@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>ARG</h1>
+
+    <p id="monologue"></p>
+    <audio id="phoneCall" controls style="display:none" src="../static/assets/phoneCall.mp3"></audio> 
+    <a id="continue" style="display:none" href="email.html">continue</a>
+
+    <script src="../static/script.js"></script>
+    <script>
+
+        const monologue = document.getElementById("monologue");
+        const monologueText = "Aha, dieser Geist war also Bean-nighe. Wusste ich's doch! Diese schottischen Mythen sind natürich wahr! *KLINGELING* Hä, wer ruft mich denn um diese Uhrzeit an? Was zum Geier...Wer sind sie?";
+        const phoneCall = document.getElementById("phoneCall");
+        const contin = document.getElementById("continue");
+
+        document.addEventListener("click", () => {
+            writeText(monologue, monologueText, () => {
+                phoneCall.style.display = "";
+                contin.style.display = "";
+            });
+        }, { once: true });
+
+    </script>
+</body>
+</html>

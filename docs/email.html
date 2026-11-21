@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>ARG</h1>
+
+    <p id="monologue"></p>
+    <audio id="morseCode" controls style="display:none" src="../static/assets/phoneCall.mp3"></audio>
+    <input type="text" id="inputCode" placeholder="Input Code" style="display:none">
+    <button type="button" id="checkCode" style="display:none">Check Code</button>
+    <p id="monologue2"></p>
+    <a id="continue" style="display:none" href="meeting.html">continue</a>
+
+    <script src="../static/script.js"></script>
+    <script>
+        
+    const monologue = document.getElementById("monologue");
+    const monologueText = "Oh mein Gott...war das...ein SCHUSS?! Oh, eine E-Mail von einem anonymen Absender..."
+    const morseCode = document.getElementById("morseCode");
+    const inputCode = document.getElementById("inputCode");
+    const checkCode = document.getElementById("checkCode");
+    const codeSolution = "Kettelerstrasse";
+    const monologue2 = document.getElementById("monologue2");
+    const monologue2Text = "Aha, eine Adresse. Da geh ich mal hin";
+    const contin = document.getElementById("continue");
+
+    document.addEventListener("click", () => {
+        writeText(monologue, monologueText, () => {
+            morseCode.style.display = "";
+            inputCode.style.display = "";
+            checkCode.style.display = "";
+        });
+    }, { once: true });
+
+    checkCode.addEventListener("click", () => {
+        if (inputCode.value.trim() === codeSolution) {
+            writeText(monologue2, monologue2Text, () => {
+                contin.style.display = "";
+            })
+        } else {
+            alert("Wrong Code");
+        }
+    });
+
+    </script>
+
+</body>
+</html>

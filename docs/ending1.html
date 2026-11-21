@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>ARG</h1>
+
+    <p id="ending"></p>
+
+    <script src="../static/script.js"></script>
+    <script>
+        
+    const ending = document.getElementById("ending");
+    const endingText = "Ending 1 Bla Bla Bla";
+    document.addEventListener("click", () => {
+        writeText(ending, endingText, () => {});
+    }, { once: true });
+
+    </script>
+
+</body>
+</html>
