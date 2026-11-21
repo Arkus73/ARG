@@ -10,12 +10,12 @@ gainNode.gain.value = volume;
 gainNode.connect(audioCtx.destination);
 
 const soundFiles = [
-    "../static/assets/typingSound1.mp3",
-    "../static/assets/typingSound2.mp3",
-    "../static/assets/typingSound3.mp3",
-    "../static/assets/typingSound4.mp3"
+    "assets/typingSound1.mp3",
+    "assets/typingSound2.mp3",
+    "assets/typingSound3.mp3",
+    "assets/typingSound4.mp3"
 ];
-const carriageReturnFile = "..static/assets/typewriterCarriageReturn.mp3";
+const carriageReturnFile = "assets/typewriterCarriageReturn.mp3";
 
 let typeBuffers = [];
 let carriageReturnBuffer = null;
