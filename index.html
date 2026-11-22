@@ -17,17 +17,20 @@
     <script src="script.js" ></script>
     <script>
 
-    const firstEmailText = "Subject: A encounter at the river, for which I have no explanation\n\
-    Dear Mister B,\n\
-    i am coming with a pleade to you. Tonight I was doing a nightwalk at the river near my home. There waS a deep mist as i heard a mysterios noise coming from the river.\n\
+    const firstEmailText = "Subject: An encounter at the river, for which I have no explanation\n\
+    Dear Mister B.,\n\
+    I am coming with a pleade to you. Tonight I was doing a nightwalk at the river near my home. There waS a deep mist as i heard a mysterios noise coming from the river.\n\
     As I looked in the direction where the noise was coming from I saw a woman kneeling down on the riverbank holding a wHite cotton shirt with a kinda black-ish spot.\n\
     I couldn't sEe much, only that she was washing the clothing and that the water began to darken in color around it. At first I thougt that She was just A woman who cleaned her clothes at an odd tIme,\n\
     but as I watcheD her more and more I began to notice more and More that she just did the same motion over and over again without seeming to gain any progress on it.\n\
     Because she didn't seem to notice me I began to walk towards her and as i reached her i began to trY and talk to her but she didn't seem to notice.\n\
     As I touched her on her shoulder she said to me two words that I would rather Not say and continued on cleaning the shirt. As I heard these words A cold shiver ran down My spine and I began to run away without looking back.\n\
-    I still don't know who she was or if she was even human but since then I have a bad feeling and wanted to know if you know what it was or if you could publish the story to help mE.\n\
+    I still don't know who she was or if she was even human but since then I have a bad feeling and wanted to know if you know what it was or if you could publish the story to help mE,\n\
+    because I heard, that you are an expert on the field of paranormal activity.\n\
     Farewell\n\
-    A";
+    A.\n\n\
+    Hmmm, what a strange message I got there. I wonder if it's real ,or just some bulllshit to get famous.\n\
+    However something about this message seems odd to me. I mean this capitalisation is horrible. Maybe there is something hidden in there...";
 
     const firstEmail = document.getElementById("firstE-Mail");
     const inputCode = document.getElementById("inputCode");
@@ -42,8 +45,8 @@
     }, { once: true });
 
     checkCode.addEventListener("click", () => {
-        if (inputCode.value.trim().toLowerCase() === codeSolution) {
-            window.location.href = "{{url_for('phoneCall')}}";
+        if(inputCode.value.trim().toLowerCase() === codeSolution) {
+            window.location.href = "phoneCall.html";
         } else {
             alert("Wrong Code");
         }

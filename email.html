@@ -10,7 +10,7 @@
     <h1>ARG</h1>
 
     <p id="monologue"></p>
-    <audio id="morseCode" controls style="display:none" src="assets/phoneCall.mp3"></audio>
+    <audio id="morseCode" controls style="display:none" src="assets/morse.wav"></audio>
     <input type="text" id="inputCode" placeholder="Input Code" style="display:none">
     <button type="button" id="checkCode" style="display:none">Check Code</button>
     <p id="monologue2"></p>
@@ -20,13 +20,16 @@
     <script>
         
     const monologue = document.getElementById("monologue");
-    const monologueText = "Oh mein Gott...war das...ein SCHUSS?! Oh, eine E-Mail von einem anonymen Absender..."
+    const monologueText = "WHAT THE FRICK!? WHAT HAPPENED? IS HE STILL ALIVE, OR IS HE DEAD??? However it did not sound like he has a good chance for survival.\n\
+    *Notification: 1 unread E-Mail* Huh? NOW I GET A MAIL FROM AN ANONYMOUS PERSON? Okay, calm down. It's just an audio file. Wait...is this another code? Why are there so many riddles?\n\
+    It's almost like I'm some kind of main character in a game."
     const morseCode = document.getElementById("morseCode");
     const inputCode = document.getElementById("inputCode");
     const checkCode = document.getElementById("checkCode");
-    const codeSolution = "Kettelerstrasse";
+    const codeSolution = "edinburgh eh6 7dr";
     const monologue2 = document.getElementById("monologue2");
-    const monologue2Text = "Aha, eine Adresse. Da geh ich mal hin";
+    const monologue2Text = "An address in Edinburgh, at the leith docks? Probalty the old grain silo, but its been abandoned for years, but maybe that's why they chose it.\n\
+    I mean it's not like my day could get worse than this and a little hike can't hurt anyone";
     const contin = document.getElementById("continue");
 
     document.addEventListener("click", () => {
@@ -38,7 +41,7 @@
     }, { once: true });
 
     checkCode.addEventListener("click", () => {
-        if (inputCode.value.trim() === codeSolution) {
+        if (inputCode.value.trim().toLowerCase() === codeSolution) {
             writeText(monologue2, monologue2Text, () => {
                 contin.style.display = "";
             })
