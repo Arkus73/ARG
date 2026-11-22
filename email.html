@@ -9,11 +9,11 @@
 
     <h1>ARG</h1>
 
-    <p id="monologue"></p>
-    <audio id="morseCode" controls style="display:none" src="assets/morse.wav"></audio>
+    <p id="monologue" style="white-space: pre-line;"></p>
+    <audio id="morseCode" controls style="display:none" src="assets/sounds/morse.wav"></audio>
     <input type="text" id="inputCode" placeholder="Input Code" style="display:none">
     <button type="button" id="checkCode" style="display:none">Check Code</button>
-    <p id="monologue2"></p>
+    <p id="monologue2" style="white-space: pre-line;"></p>
     <a id="continue" style="display:none" href="meeting.html">continue</a>
 
     <script src="script.js"></script>
@@ -28,7 +28,7 @@
     const checkCode = document.getElementById("checkCode");
     const codeSolution = "edinburgh eh6 7dr";
     const monologue2 = document.getElementById("monologue2");
-    const monologue2Text = "An address in Edinburgh, at the leith docks? Probalty the old grain silo, but its been abandoned for years, but maybe that's why they chose it.\n\
+    const monologue2Text = "An address in Edinburgh, at the leith docks? Probably the old grain silo, but it's been abandoned for years, but maybe that's why they chose it.\n\
     I mean it's not like my day could get worse than this and a little hike can't hurt anyone";
     const contin = document.getElementById("continue");
 

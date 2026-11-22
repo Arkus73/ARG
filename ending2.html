@@ -9,15 +9,15 @@
     
     <h1>ARG</h1>
 
-    <p id="ending"></p>
+    <p id="ending" style="white-space: pre-line;"></p>
 
     <script src="script.js"></script>
     <script>
         
     const ending = document.getElementById("ending");
     const endingText = "I should not write this article, maybe he was right and this thing is dangerous and if I'm honest I would love to life some more years.\n\
-    What a crazy story it would be, maybe I will make some type of game about this creature and make it looke like a mythic creature in there, maybe a riddle game";
-    
+    What a crazy story it would be, maybe I will make some type of game about this creature and make it look like a mythic creature in there, maybe a riddle game.";
+
     document.addEventListener("click", () => {
         writeText(ending, endingText, () => {});
     }, { once: true });

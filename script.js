@@ -10,15 +10,17 @@ gainNode.gain.value = volume;
 gainNode.connect(audioCtx.destination);
 
 const soundFiles = [
-    "assets/typingSound1.mp3",
-    "assets/typingSound2.mp3",
-    "assets/typingSound3.mp3",
-    "assets/typingSound4.mp3"
+    "assets/sounds/typingSound1.mp3",
+    "assets/sounds/typingSound2.mp3",
+    "assets/sounds/typingSound3.mp3",
+    "assets/sounds/typingSound4.mp3"
 ];
-const carriageReturnFile = "assets/typewriterCarriageReturn.mp3";
+const carriageReturnFile = "assets/sounds/typewriterCarriageReturn.mp3";
+const shoot = "assets/sounds/shoot.mp3";
 
 let typeBuffers = [];
 let carriageReturnBuffer = null;
+let shootBuffer = null;
 
 // Hilfsfunktion zum Vorladen & Dekodieren in den RAM
 async function loadSound(url) {
@@ -31,6 +33,7 @@ async function loadSound(url) {
 async function initSounds() {
     typeBuffers = await Promise.all(soundFiles.map(url => loadSound(url)));
     carriageReturnBuffer = await loadSound(carriageReturnFile);
+    shootBuffer = await loadSound(shoot);
 }
 
 initSounds();

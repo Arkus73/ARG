@@ -9,7 +9,7 @@
     
     <h1>ARG</h1>
 
-    <p id="ending"></p>
+    <p id="ending" style="white-space: pre-line;"></p>
 
     <script src="script.js"></script>
     <script>
@@ -21,7 +21,9 @@
     Nice that will make me famous and I will be a hero. *knock, knock* WHOS THERE?! *opens door*";
 
     document.addEventListener("click", () => {
-        writeText(ending, endingText, () => {});
+        writeText(ending, endingText, () => {
+            playBuffer(shoot);
+        });
     }, { once: true });
 
     </script>
