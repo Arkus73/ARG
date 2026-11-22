@@ -30,7 +30,7 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     <script>
         
     const monologue = document.getElementById("monologue");
-    const monologueText = "WHAT THE FRICK!? WHAT HAPPENED? IS HE STILL ALIVE, OR IS HE DEAD??? However it did not sound like he has a good chance for survival.\n\
+    const monologueText = "WHAT THE FRICK!? WHAT HAPPENED? IS HE STILL ALIVE, OR IS HE DEAD??? However, it didn't sound like he has a good chance for survival.\n\
     *Notification: 1 unread E-Mail* Huh? NOW I GET A MAIL FROM AN ANONYMOUS PERSON? Okay, calm down. It's just an audio file. Wait...is this another code? Why are there so many riddles?\n\
     It's almost like I'm some kind of main character in a game."
     const morseCode = document.getElementById("morseCode");
@@ -54,7 +54,7 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
         if (inputCode.value.trim().toLowerCase() === codeSolution) {
             writeText(monologue2, monologue2Text, () => {
                 contin.style.display = "";
-            })
+            });
         } else {
             alert("Wrong Code");
         }

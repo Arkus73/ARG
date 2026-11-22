@@ -67,22 +67,22 @@ function writeText(element, text, onComplete) {
             if (currentChar === "\n") {
                 playBuffer(carriageReturnBuffer);
                 index++;
-                type();
+                setTimeout(type, 3 * typeTimeout + (Math.random() - 0.5) * typeTimeoutInconsistency);
             } else if (currentChar !== " " && currentChar !== "." && currentChar !== "," && currentChar !== "!" && currentChar !== "?") {
                 const randomIndex = Math.floor(Math.random() * typeBuffers.length);
                 playBuffer(typeBuffers[randomIndex]);
                 index++;
-                setTimeout(type, typeTimeout + Math.random() * typeTimeoutInconsistency);
+                setTimeout(type, typeTimeout + (Math.random() - 0.5) * typeTimeoutInconsistency);
             // Bei Satzzeichen etwas längere Pause
             } else if(currentChar !== " ") {
                 const randomIndex = Math.floor(Math.random() * typeBuffers.length);
                 playBuffer(typeBuffers[randomIndex]);
                 index++;
-                setTimeout(type, 3 * typeTimeout + Math.random() * typeTimeoutInconsistency);
+                setTimeout(type, 3 * typeTimeout + (Math.random() - 0.5) * typeTimeoutInconsistency);
             // Bei Whitespace kein Sound
             } else {
                 index++;
-                setTimeout(type, typeTimeout + Math.random() * typeTimeoutInconsistency);
+                setTimeout(type, typeTimeout + (Math.random() - 0.5) * typeTimeoutInconsistency);
             }
 
         } else {
